@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
+
 import Header from "./components/Header";
 import DisplayWeatherData from "./components/DisplayWeatherData";
 
@@ -23,7 +24,7 @@ function App() {
       });
     } else {
       console.log(
-        "Si no me das permiso, no puedo obtener la localizacion de tu city"
+        "If you don't give me permission, I can't get the location of your city"
       );
       getWeatherData(location.latitude, location.longitude, "");
     }
@@ -53,7 +54,7 @@ function App() {
         img: data.current.weather_icons,
       });
     } catch (error) {
-      console.log("Encountered Error");
+      console.log("no se pudo");
     }
   };
 
